@@ -8,3 +8,5 @@ cooking
 reading
 breakfast
 lunch
+new course
+rafting
