@@ -3,3 +3,6 @@ bath
 play
 bath
 play
+new task
+cooking
+reading
