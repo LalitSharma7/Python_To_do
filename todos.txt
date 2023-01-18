@@ -1,8 +1,10 @@
 food
-bath
-play
+dinner
+mask making
 bath
 play
 new task
 cooking
 reading
+breakfast
+lunch
