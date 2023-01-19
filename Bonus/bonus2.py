@@ -1,6 +1,5 @@
 feet_inches = input("Enter feet and inches: ")
 
-
 def convert(feet_inches):
     parts = feet_inches.split(" ")
     feet = float(parts[0])

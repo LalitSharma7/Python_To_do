@@ -10,3 +10,4 @@ breakfast
 lunch
 new course
 rafting
+scikit learn
