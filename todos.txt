@@ -11,3 +11,6 @@ lunch
 new course
 rafting
 scikit learn
+singing class
+dancing class
+making food
