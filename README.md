@@ -12,9 +12,18 @@ Python to do app
  - Module
  - Git
  - GUI
+ - Streamlit
 
 ## Environment
    Pycharm community edition and latest version of python
+   for webapp install Streamlit
 
 ## Install PySimpleGui
-   pip3 install PySimpleGui
+   pip install PySimpleGui
+
+## Install Streamlit
+   pip install streamlit
+
+## Demo
+
+   
