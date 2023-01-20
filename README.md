@@ -25,5 +25,6 @@ Python to do app
    pip install streamlit
 
 ## Demo
+   -![Screenshot](https://github.com/LalitSharma7/Python_To_do/blob/master/todo.PNG)
 
    
