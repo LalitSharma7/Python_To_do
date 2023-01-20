@@ -1,16 +1,5 @@
-food
-dinner
+lunchdinner
 mask making
 bath
-play
-new task
-cooking
-reading
-breakfast
-lunch
-new course
-rafting
-scikit learn
-singing class
-dancing class
-making food
+
+
