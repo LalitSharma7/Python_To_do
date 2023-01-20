@@ -1,5 +1,5 @@
 
-FilePath = "todos.txt"
+FilePath = r"C:\Users\lalisharma\Documents\ToDo\todos.txt"
 
 
 def get_todos(filepath=FilePath):
