@@ -1,50 +1,47 @@
-from functions import *
+from functions import (
+    add_todo,
+    complete_todo,
+    edit_todo,
+    get_todos,
+    show_todos,
+)
 
-while True:
-    user_action = input("Type add, show, edit, complete or  exit: ")
-    user_action = user_action.strip()
-    if user_action.startswith('add'):
-        todo = user_action[4:]
-        todos = get_todos()
-        todos.append(todo + '\n')
-        write_todos(todos)
 
-    elif user_action.startswith('show'):
-        todos = get_todos()
-        # new_todos = [item.strip('\n') for item in todos]
-        # Try list comprehensions
-        for index, item in enumerate(todos):
-            item = item.strip('\n')
-            row = f"{index + 1}-{item}"
-            print(row)
+COMMANDS = {
+    'add': add_todo,
+    'show': show_todos,
+    'edit': edit_todo,
+    'complete': complete_todo,
+    'exit': None,
+}
 
-    elif user_action.startswith('edit'):
-        try:
-            number = int(user_action[5:])
-            number = number - 1
-            new_todo = input("Enter new todo: ")
-            todos = get_todos()
-            todos[number] = new_todo + '\n'
-            write_todos(todos)
-        except ValueError:
-            print("Your command is not valid")
+
+def get_command_and_text():
+    user_input = input("Type add, show, edit, complete or exit: ")
+    input_words = user_input.split()
+    user_action = input_words[0]
+    user_data = ''
+    if len(input_words) > 1:
+        user_data = ' '.join(input_words[1:])
+    return user_action, user_data
+
+
+def run_terminal_application():
+    while True:
+        command, text = get_command_and_text()
+
+        if command not in COMMANDS:
+            print('Command is not Valid')
             continue
 
-    elif user_action.startswith('complete'):
-        try:
-            number = int(user_action[9:])
-            todos = get_todos()
-            index = number - 1
-            to_do_remove = todos[index].strip('\n')
-            todos.pop(index)
-            write_todos(todos)
-        except IndexError:
-            print("There is no item with that number")
-            continue
+        if command == 'exit':
+            print('Bye')
+            break
 
-    elif user_action.startswith('exit'):
-        break
-    else:
-        print("Command is not Valid")
+        all_todos = get_todos()
+        action_function = COMMANDS[command]
+        action_function(all_todos, text)
 
-print("Bye")
+
+if __name__ == '__main__':
+    run_terminal_application()
